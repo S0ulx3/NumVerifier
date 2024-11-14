@@ -19,12 +19,12 @@ trap ctrl_c INT
 
 # APIKEY
 
-API_KEY="$(cat .api.txt)"
+API_KEY="$(echo "$(cat .api.txt)")"
 
 
 # Menú
 tput civis
-	echo -e "\n\t\e[44m\e[30m [ Bienvenido a NumVerifier By \e[46m\e[30mS0ulx3\e[44m\e[30m ] \n\e[0m\e[34m"
+	echo -e "\n\t\e[44m\e[30m [ Bienvenido a NumVerifier By \e[46m\e[30mS0ulx3\e[44m\e[30m ] \n\e[0m\e[0m\e[34m"
 
 	if [ -e ./.api.txt ]; then
 	:
@@ -47,8 +47,7 @@ RESPONSE=$(curl -s "http://apilayer.net/api/validate?access_key=$API_KEY&number=
 
 # Usa 'jq' para formatear la respuesta
 tput civis
-echo
-echo -e $RESPONSE | jq -r '[
+echo; echo -e $RESPONSE | jq -r '[
     "Número de teléfono: \(.number)",
     "Formato local: \(.local_format)",
     "Formato internacional: \(.international_format)",
@@ -60,5 +59,5 @@ echo -e $RESPONSE | jq -r '[
     "Tipo de línea: \(.line_type)"
 ] | .[]'
 
-
+sleep 1
 tput cnorm; exit 1
