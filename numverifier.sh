@@ -31,13 +31,13 @@ tput civis
 	else
 	echo -e "\n\t\e[31m [!] Esto solo ocurrirá una vez.\e[34m"
 	echo -e "\t\e[34m [?] Inserta tu API Key de https://numverify.com\e[31m"
-	read -p "	---> " apikey
+	read -p "	  ---> " apikey
 	echo "$apikey" > .api.txt
 	echo
 	fi
 	echo -e "\t\e[34m [?] Inserta el numero que desees verificar.\e[0m"
 	echo -e "\t\e[34m [?] Por ejemplo: \e[36m+34123456789 \n\e[31m"
-	read -p "	---> " PHONE_NUMBER
+	read -p "	  ---> " PHONE_NUMBER
 	sleep 1
 tput cnorm
 
