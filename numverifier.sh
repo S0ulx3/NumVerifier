@@ -19,7 +19,7 @@ trap ctrl_c INT
 
 # APIKEY
 
-API_KEY="$(echo "$(cat .api.txt)")"
+API_KEY="$(echo "$(cat .api.txt 2>/dev/null)")"
 
 
 # Menú
