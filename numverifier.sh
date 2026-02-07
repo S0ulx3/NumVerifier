@@ -24,7 +24,7 @@ API_KEY="$(echo "$(cat .api.txt 2>/dev/null)")"
 
 # Menú
 tput civis
-	echo -e "\n\t\e[44m\e[30m [ Bienvenido a NumVerifier By \e[46m\e[30mS0ulx3\e[44m\e[30m ] \n\e[0m\e[0m\e[34m"
+	echo -e "\n\t\e[44m\e[30m [ Bienvenido a NumVerifier By \e[46m\e[30mS0ulx3\e[44m\e[30m ]\e[0m\n"
 
 	if [ -e ./.api.txt ]; then
 	:
