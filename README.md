@@ -4,6 +4,9 @@
 | ------------  | -------------------- |
 |![f](https://github.com/S0ulx3/NumVerifier/blob/main/Numverifier.png)|![f](https://github.com/S0ulx3/NumVerifier/blob/main/Numverifier-2.png)
 
+# Requisitos
+- jq
+- curl
 
 
 # ¿ Qué hace NumVerifier ?
