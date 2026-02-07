@@ -4,10 +4,11 @@
 | ------------  | -------------------- |
 |![f](https://github.com/S0ulx3/NumVerifier/blob/main/Numverifier.png)|![f](https://github.com/S0ulx3/NumVerifier/blob/main/Numverifier-2.png)
 
-# Requisitos
+---
+# Dependencias - Se instalan automáticamente 
 - jq
 - curl
-
+---
 
 # ¿ Qué hace NumVerifier ?
 - NumVerifier es un script hecho en bash que otorga información acerca de un número de telefono.
