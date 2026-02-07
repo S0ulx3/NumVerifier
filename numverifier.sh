@@ -19,7 +19,29 @@ trap ctrl_c INT
 
 # APIKEY
 
-API_KEY="$(echo "$(cat .api.txt 2>/dev/null)")"
+API_KEY="$(cat .api.txt 2>/dev/null)"
+
+
+# Verificación de dependencias
+
+for requirements in jq curl; do
+
+if $(! which $requirements)
+then
+
+clear
+echo -e "\n\e[31m[ Comando \e[34m$requirements\e[31m no instalado, instalando... ]\e[0m\n"
+
+sudo apt install "$requirements" -y
+
+else
+:
+fi
+
+clear
+
+done
+
 
 
 # Menú
